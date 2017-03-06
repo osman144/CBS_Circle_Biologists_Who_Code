@@ -3,10 +3,6 @@ class proteinSeq:
     def __init__(self, protein):
         self.__protein = protein
 
-class ntSeq:
-    def __init__(self, nt):
-        self.__nt = nt
-
 pka = {'A': 'null', 'F':'null', 'G':'null', 'S':'null', 'I':'null', 'L':'null', 'M':'null', 'N':'null', 'P':'null', 'Q':'null', 'T':'null','W':'null', 'V':'null','H':6.0, 'D':3.7, 'E':4.2, 'Y':10.5, 'C':8.2, 'K':10.5, 'R':12.5}
 acidic = ['D', 'E', 'Y', 'C']
 basic = ['K', 'R', 'H']
@@ -216,6 +212,12 @@ def reverseAssoc(x): #reverse dictionary not used in code but useful for switchi
             dictionary[x[key]] = [key]
     return dictionary
 
+##############################NUCLEOTIDE################################################
+
+class ntSeq:
+    def __init__(self, nt):
+        self.__nt = nt
+
 def codonlookup(sequence):
     codons = {'UUU': 'F', 'UUC': 'F', 'UUA': 'L', 'UUG': 'L', 'UCU': 'S', 'UCC': 'S', 'UCA': 'S', 'UCG': 'S',
               'UAU': 'T', 'UAC': 'T', 'UAA': 'Stop', 'UAG': 'Stop', 'UGU': 'C', 'UGC': 'C', 'UGA': 'Stop', 'UGG': 'W',
@@ -283,17 +285,6 @@ def codonlookup(sequence):
         rfcount += 1
 # running in reverse
 
-
-aaFreq()
-print('AA FREQUENCY:',freq)
-get_polarity(protein)
-mw()
-disulfide()
-ntSeq(protein)
-charge()
-findmotif()
-sequence = (input('Enter nucleotide sequence to be translated:')).upper()
-codonlookup(sequence)
 
 import time
 import os.path
@@ -467,3 +458,16 @@ while searching == True:
         pass
     else:
         searching = False
+
+#Call functions
+
+aaFreq()
+print('AA FREQUENCY:',freq)
+get_polarity(protein)
+mw()
+disulfide()
+ntSeq(protein)
+charge()
+findmotif()
+sequence = (input('Enter nucleotide sequence to be translated:')).upper()
+codonlookup(sequence)
