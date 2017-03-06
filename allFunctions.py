@@ -133,7 +133,6 @@ if decision == 'p':
         print("Number of non polar: ", numNonPolar)
         print("Number of charged: ", numCharged)
 
-
     def ntSeq(protein):
         reversecodons = {'G': ['GGU', 'GGA', 'GGG', 'GGC'], 'P': ['CCU', 'CCA', 'CCC', 'CCG'], 'F': ['UUC', 'UUU'],
                          'D': ['GAC', 'GAU'], 'E': ['GAA', 'GAG'], 'W': ['UGG'], 'C': ['UGU', 'UGC'],
@@ -218,8 +217,6 @@ if decision == 'p':
             print("from",filteredscorelist[x][0] + 1,"to",filteredscorelist[x][0]+len(motif) + 1,":",aaseq[filteredscorelist[x][0]:filteredscorelist[x][0]+len(motif)])
 
 
-
-
 pI = {'A':6.0, 'F':5.48, 'G':5.97, 'S':5.58, 'I':6.02, 'L':5.98, 'M':5.74, 'N':5.41, 'P':6.30, 'Q':5.65, 'T':5.60,'W':5.89, 'V':5.96,'H':7.59, 'D':2.77, 'E':3.22, 'Y':5.66, 'C':5.07, 'K':9.74, 'R':10.76}
 
 def getPI(protein):
@@ -268,7 +265,7 @@ def findMotif(seq, motif, mismatch, motiflength, strand, direction):
 
 ##############################NUCLEOTIDE################################################
 
-class ntSeq:
+class ntideSeq:
     def __init__(self, nt):
         self.__nt = nt
 
