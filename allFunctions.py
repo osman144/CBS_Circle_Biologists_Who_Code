@@ -8,6 +8,8 @@ if decision == 'p':
         def __init__(self, protein):
             self.__protein = protein
 
+                #change
+
     pka = {'A': 'null', 'F':'null', 'G':'null', 'S':'null', 'I':'null', 'L':'null', 'M':'null', 'N':'null', 'P':'null', 'Q':'null', 'T':'null','W':'null', 'V':'null','H':6.0, 'D':3.7, 'E':4.2, 'Y':10.5, 'C':8.2, 'K':10.5, 'R':12.5}
     acidic = ['D', 'E', 'Y', 'C']
     basic = ['K', 'R', 'H']
